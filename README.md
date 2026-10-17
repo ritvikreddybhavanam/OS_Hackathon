@@ -1,7 +1,7 @@
 # IPC Chat — Inter-Process Communication in Real Time
 
 > **Operating Systems Hackathon Project**  
-> Real-time bidirectional Inter-Process Communication (IPC) between independent native Linux C processes via operating-system-managed anonymous pipes, coordinated through an Express/Socket.IO parent relay with a modern, responsive React dashboard.
+> Real-time Bidirectional Inter-Process Communication (IPC) between independent native Linux C processes via operating-system-managed anonymous pipes, coordinated through an Express/Socket.IO parent relay with a modern, responsive React dashboard.
 
 ---
 

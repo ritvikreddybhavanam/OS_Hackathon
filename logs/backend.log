@@ -1,0 +1,25 @@
+==================================================
+  IPC CHAT — INTER-PROCESS COMMUNICATION SERVER
+==================================================
+  Backend URL:    http://localhost:8080
+  Health Check:   http://localhost:8080/api/health
+  System Status:  http://localhost:8080/api/status
+  Messages API:   http://localhost:8080/api/messages
+[ACTIVITY INFO] [SYSTEM_INIT] Backend initialized. Spawning Alice and Bob Linux C workers...
+[ACTIVITY SUCCESS] [PROCESS_START] Alice C process spawned successfully with PID 8850 via OS pipe
+[ACTIVITY SUCCESS] [PROCESS_START] Bob C process spawned successfully with PID 8851 via OS pipe
+  Alice Worker:   PID 8850
+  Bob Worker:     PID 8851
+==================================================
+[ACTIVITY SUCCESS] [SYSTEM_READY] IPC Chat server ready on port 8080
+[STDERR Alice] [Alice] Process started | PID: 8850 | PPID: 8800 | Architecture: Linux C (ELF)
+[Alice] Listening for JSON Lines messages on stdin (pipe fd 0)...
+[STDERR Bob] [Bob] Process started | PID: 8851 | PPID: 8800 | Architecture: Linux C (ELF)
+[Bob] Listening for JSON Lines messages on stdin (pipe fd 0)...
+[SOCKET CONNECT] Client connected: duDuhuOpVeZc6CWiAAAA
+[ACTIVITY INFO] [CLIENT_CONNECT] Browser client connected (ID: duDuhuOp)
+[ACTIVITY INFO] [MESSAGE_SUBMIT] Writing to OS pipe stdin of Bob (PID 8851): "hi"
+[STDERR Bob] [Bob] [PID 8851] Received message #1 from 'Alice': "hi"
+[ACTIVITY SUCCESS] [MESSAGE_ACK] IPC Delivery confirmed: Alice -> Bob (ACK emitted by PID 8851, count: 1)
+[ACTIVITY INFO] [MESSAGE_SUBMIT] Writing to OS pipe stdin of Alice (PID 8850): "hello"
+[STDERR Alice] [Alice] [PID 8850] Received message #1 from 'Bob': "hello"
